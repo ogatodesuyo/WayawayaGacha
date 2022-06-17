@@ -9,7 +9,6 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
-import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -19,7 +18,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', '']
 
@@ -33,6 +32,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'gacha',
+    'menu',
 ]
 
 MIDDLEWARE = [
@@ -60,8 +61,6 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.static',
-                'social_django.context_processors.backends',
-                'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -142,10 +141,3 @@ if not DEBUG:
     import django_heroku
     django_heroku.settings(locals()) 
 
-# 本リリース前に変更
-# ____________________________________________________________________________
-
-# db_from_env = dj_database_url.config(conn_max_age=600, ssl_require=True)
-# DATABASES['default'].update(db_from_env)
-
-# ____________________________________________________________________________
