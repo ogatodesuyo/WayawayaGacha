@@ -21,5 +21,5 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('gacha/', include('gacha.urls')),
-    # path('menu/', include('menu.urls')),
+    path('menu/', include('menu.urls')),
 ]
