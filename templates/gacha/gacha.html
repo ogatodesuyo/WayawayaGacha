@@ -8,9 +8,38 @@
 {% endblock %}
 {% block content %}
 
-<div class="sample">
-    テスト
+<div class="side-area">
+
 </div>
+
+<div class="main-area">
+    <div class="gacha-result">
+        <div class="item-card">
+            <h2 class="menu-name">殿の唐揚げ</h2>
+            <p>400円</p>
+        </div>
+    </div>
+    <div class="gacha-container">
+        テスト
+        <form class="row g-3" action="{% url 'gacha:gacha' %}" method="get">
+            {% csrf_token %}
+            <div class="col-auto">
+                <input class="form-control" type="number" aria-label="price" name="price">
+            </div>
+            <div class="col-auto">
+                <button type="submit" class="btn btn-primary mb-3">ガチャを回す</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="side-area">
+
+</div>
+
+
+
+
+
 
 
 

@@ -4,7 +4,7 @@ from . import views
 app_name = 'gacha'
 
 urlpatterns = [
-    path('', views.gacha, ),
+    path('', views.gacha, name='gacha'),
     # path('complate/<int:id>/', views.market_complate, ),
     # path('result/', views.market_search_result, name='searchResult'),
     # path('<slug:c_slug>/', views.allProdCat, name='products_by_category'),
