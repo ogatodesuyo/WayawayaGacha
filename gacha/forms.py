@@ -1,5 +1,5 @@
 from django import forms
 
 
-class PriceInputForm():
-    price = forms.IntegerField(initial='3000')
+class BudgetInputForm():
+    budget = forms.IntegerField(initial='3000')
